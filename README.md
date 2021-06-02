@@ -1,7 +1,7 @@
 
 
 
-# Gawq-ML-Bert
+# Real Time Text Analytics
 This backend ML service deploys Transformer Model for upstream NLP task, Semantic Similarity, with Promethes stack for monitoring. 
 
 The ML Service is containerized REST API developed with FastAPI and ML client service is python script, running the whole pipeline of getting articles from database, calculating embeddings, finding similar embddings and writing similarity results to DB after filtering against a set threshold.
