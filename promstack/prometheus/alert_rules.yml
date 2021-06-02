@@ -1,0 +1,17 @@
+groups:
+
+- name: alert_rules
+  rules:
+  # Alert for no new data
+  - alert: NoNewArticlesProcessed
+    expr: sum(query_vector_response_summary_count{job="milvus_metrics"} offset 30m) < 1
+    for: 1s
+    labels:
+      severity: page
+
+  # Alert for server down
+  - alert: MilvusServerDown
+    expr: sum(keeping_alive_seconds_total{job="milvus_metrics"} offset 10s) < 1
+    for: 1s
+    labels:
+      severity: page

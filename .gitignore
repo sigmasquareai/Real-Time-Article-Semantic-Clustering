@@ -1,0 +1,15 @@
+__pycache__
+
+#Model Zip
+*.zip
+
+#Folders
+milvus/db/
+milvus/logs/
+milvus/wal/
+
+#Config
+*.ini
+
+#dev
+*-old.yml
