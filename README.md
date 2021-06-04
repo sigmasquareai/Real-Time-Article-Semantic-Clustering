@@ -36,16 +36,9 @@ Run `bash ./provision.sh`
 
 This shell script installs docker and docker-compose on local machine if not already exists and initiates all the services. It takes following positional arguments:
 
-1. `buildmilvus` build cache the embeddings of last 03 days *(must be provided for first time deployment)*
+1. `buildmilvus` cache the embeddings of last 03 days *(must be provided for first time deployment)*
 2. `testml` this will test the ML server response
 
-### Debug
-In the project root directory, following commands will stop or resume all the services.
-
-Stop all the services  `sudo docker-compose stop`
-Shut all the services  `sudo docker-compose down`
-Restart is required if any changes are made in configs  `sudo docker-compose restart`
-Start all the services in background  `sudo docker-compose up -d` but to view real-time console logs, run the command without `-d` flag.
 ## Monitoring
 Make sure the respective ports are opened for each service.
 
